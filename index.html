@@ -629,7 +629,10 @@
           <div class="caret" style="margin-top:0.5rem;">$&nbsp;</div>
         </div>
         <div class="contact-cta">
-          <a class="btn btn-primary" href="mailto:hello@allwynlabs.win">Email hello@allwynlabs.win</a>
+          <button type="button" class="btn btn-primary" id="copyEmailBtn" data-email="hello@allwynlabs.win">
+            <span id="copyEmailLabel">Copy hello@allwynlabs.win</span>
+          </button>
+          <a class="btn btn-ghost" href="mailto:hello@allwynlabs.win">Open in mail app</a>
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/masternikhil/" target="_blank" rel="noopener">Connect on LinkedIn</a>
         </div>
       </div>
@@ -640,6 +643,36 @@
 <footer>
   <div class="wrap">Allwyn Labs · allwynlabs.win — Pune, India</div>
 </footer>
+
+<script>
+  (function(){
+    var btn = document.getElementById("copyEmailBtn");
+    var label = document.getElementById("copyEmailLabel");
+    if (!btn) return;
+    var email = btn.getAttribute("data-email");
+    var defaultText = label.textContent;
+    var resetTimer;
+    btn.addEventListener("click", function(){
+      var done = function(ok){
+        label.textContent = ok ? "Copied!" : email;
+        clearTimeout(resetTimer);
+        resetTimer = setTimeout(function(){ label.textContent = defaultText; }, 1800);
+      };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(function(){ done(true); }, function(){ done(false); });
+      } else {
+        var ta = document.createElement("textarea");
+        ta.value = email;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand("copy"); done(true); } catch (e) { done(false); }
+        document.body.removeChild(ta);
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>
