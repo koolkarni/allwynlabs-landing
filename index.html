@@ -295,8 +295,7 @@
   }
 
   /* ---------- TEAM (bio cards) ---------- */
-  .id-cards{ display:grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
-  @media (max-width: 720px){ .id-cards{ grid-template-columns: 1fr; } }
+  .id-cards{ display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.4rem; }
   .id-card{
     background: var(--surface);
     border: 1px solid var(--line);
@@ -438,7 +437,7 @@
         <div class="readout">
           <div class="rh">Studio status</div>
           <dl>
-            <div class="row"><dt>Team</dt><dd>Industry experts, 12–14 yrs exp.</dd></div>
+            <div class="row"><dt>Team</dt><dd>Industry experts, 9–14 yrs exp.</dd></div>
             <div class="row"><dt>Platforms shipped</dt><dd>3 in production</dd></div>
             <div class="row"><dt>Uptime built</dt><dd>99.9%</dd></div>
             <div class="row"><dt>Patents filed</dt><dd>3</dd></div>
@@ -614,6 +613,25 @@
             <span class="id-tag">Azure AZ-900</span>
             <a class="id-tag link" href="https://www.linkedin.com/in/vinuppin/" target="_blank" rel="noopener">LinkedIn</a>
             <a class="id-tag link" href="resume/Vinay_Uppin_Angular.pdf" target="_blank" rel="noopener">Resume</a>
+          </div>
+        </div>
+
+        <div class="id-card">
+          <div class="id-head">
+            <div class="id-photo"><img src="img/priyanka.png" alt="Priyanka Muchandikar" style="object-position:50% 22%;"></div>
+            <div class="id-identity">
+              <h3>Priyanka Muchandikar</h3>
+              <p class="id-role">Backend / Full-Stack Engineer</p>
+            </div>
+          </div>
+          <div class="id-tags">
+            <span class="id-tag">Ex-TekHub</span>
+            <span class="id-tag">Ex-battenfeld-cincinnati</span>
+            <span class="id-tag">Kafka &amp; Cassandra</span>
+            <span class="id-tag">IoT data at 10k+ devices</span>
+            <a class="id-tag link" href="https://linkedin.com/in/priyanka-muchandikar" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="id-tag link" href="https://github.com/pnkcompany/" target="_blank" rel="noopener">GitHub</a>
+            <a class="id-tag link" href="resume/priyanka.pdf" target="_blank" rel="noopener">Resume</a>
           </div>
         </div>
       </div>
