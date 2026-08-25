@@ -293,40 +293,46 @@
     white-space:nowrap;
   }
 
-  /* ---------- TEAM ---------- */
-  .badges{ display:flex; flex-wrap:wrap; gap:0.5rem; margin-top: 1.4rem; }
-  .badges span{
-    font-family:"IBM Plex Mono",monospace; font-size:0.68rem;
-    border:1px solid var(--line); padding: 0.35rem 0.65rem; border-radius: 4px;
-    color: var(--text-muted);
-  }
-  .member{
+  /* ---------- TEAM (bio cards) ---------- */
+  .id-cards{ display:grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
+  @media (max-width: 720px){ .id-cards{ grid-template-columns: 1fr; } }
+  .id-card{
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: 8px;
-    padding: clamp(1.6rem,3vw,2.2rem);
-    display:grid;
-    grid-template-columns: auto 1fr;
-    gap: clamp(1.4rem,3vw,2rem);
-    align-items:start;
+    border-radius: 10px;
+    overflow: hidden;
   }
-  @media (max-width: 640px){ .member{ grid-template-columns: 1fr; } }
-  .member-photo{
-    width: 60px; height: 60px; border-radius: 6px;
-    background: var(--navy); color: #fff;
-    display:flex; align-items:center; justify-content:center;
-    font-size: 1.05rem; font-weight:600; letter-spacing: 0.02em;
-    font-family: "IBM Plex Mono", monospace;
-    flex-shrink:0;
+  .id-head{
+    display:flex;
+    align-items:center;
+    gap: 1rem;
+    padding: 1.5rem 1.5rem 0;
   }
-  .member-head{ display:flex; align-items:center; gap:0.8rem; flex-wrap:wrap; }
-  .member-head h3{ font-size: 1.25rem; }
-  .member-body p{ color: var(--text-body); font-size: 0.92rem; line-height: 1.62; margin: 0.9rem 0 0; max-width: 64ch; }
-  .member-links{ display:flex; gap:1.2rem; margin-top: 1.2rem; flex-wrap:wrap; }
-  .member-links a{
-    font-family:"IBM Plex Mono",monospace; font-size: 0.76rem;
-    color: var(--primary); text-decoration: underline; text-underline-offset:2px;
+  .id-photo{
+    width: 76px;
+    height: 76px;
+    flex: 0 0 auto;
+    aspect-ratio: 1 / 1;
+    background: var(--navy);
+    border-radius: 50%;
+    border: 2px solid var(--chip-border);
+    overflow: hidden;
   }
+  .id-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .id-identity h3{ font-size: 1.15rem; line-height:1.25; }
+  .id-role{
+    font-family:"IBM Plex Mono",monospace; font-size:0.72rem; font-weight:600;
+    color: var(--primary); margin-top: 0.3rem;
+  }
+  .id-tags{ display:flex; flex-wrap:wrap; gap: 0.5rem; margin: 1.1rem 1.5rem 0; padding: 1.1rem 0 1.6rem; border-top: 1px dashed var(--line-soft); }
+  .id-tag{
+    font-family:"IBM Plex Mono",monospace; font-size:0.68rem;
+    border:1px solid var(--line); padding: 0.38rem 0.7rem; border-radius: 20px;
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+  .id-tag.link{ color: var(--primary); border-color: var(--chip-border); }
+  .id-tag.link:hover{ background: var(--chip-bg); }
 
   .spec{
     background: var(--surface);
@@ -561,37 +567,51 @@
       <div class="section-head">
         <p class="eyebrow">Team</p>
         <h2>The engineers behind Allwyn Labs.</h2>
-        <p>A small studio, not a subcontractor chain — every project is built directly by the engineer on this page.</p>
+        <p>A small studio, not a subcontractor chain — every project is built directly by the engineers on this page.</p>
       </div>
 
-      <div class="member">
-        <div class="member-photo mono">NK</div>
-        <div class="member-body">
-          <div class="member-head">
-            <h3>Nikhil H. Kulkarni</h3>
-            <span class="pill">Full-Stack Engineer</span>
+      <div class="id-cards">
+        <div class="id-card">
+          <div class="id-head">
+            <div class="id-photo"><img src="img/nikhil.jpeg" alt="Nikhil H. Kulkarni" style="object-position:50% 18%;"></div>
+            <div class="id-identity">
+              <h3>Nikhil H. Kulkarni</h3>
+              <p class="id-role">Full-Stack Engineer</p>
+            </div>
           </div>
-          <p>14+ years in production software, most recently as a Software Development Engineer II at Intuit, where he architected a Redis-based microservice that cut processing time 2–3x and built a Drools-driven spam engine that improved filtering effectiveness by 70–80%. Before that, at Mercedes-Benz R&amp;D, he built the event-driven cloud infrastructure behind an IoT platform serving millions of devices at 99.9% uptime.</p>
-          <p>Holds a Master's in Computer Science (4.0 GPA) from San Francisco Bay University, and is a named inventor on three filed patents spanning cargo tracking and peer-to-peer asset exchange systems.</p>
-          <div class="badges">
-            <span>Ex-Intuit</span>
-            <span>Ex-Mercedes-Benz R&amp;D</span>
-            <span>Ex-Persistent Systems</span>
-            <span>3 patents filed</span>
-            <span>M.S. Computer Science</span>
+          <div class="id-tags">
+            <span class="id-tag">Ex-Intuit</span>
+            <span class="id-tag">Ex-Mercedes-Benz R&amp;D</span>
+            <span class="id-tag">Ex-Persistent Systems</span>
+            <span class="id-tag">3 patents filed</span>
+            <span class="id-tag">M.S. Computer Science</span>
+            <a class="id-tag link" href="https://www.linkedin.com/in/masternikhil/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="id-tag link" href="https://github.com/koolkarni" target="_blank" rel="noopener">GitHub</a>
+            <a class="id-tag link" href="https://stackoverflow.com/users/6302996/nikhil-kulkarni" target="_blank" rel="noopener">Stack Overflow</a>
           </div>
-          <div class="member-links">
-            <a href="https://www.linkedin.com/in/masternikhil/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://github.com/koolkarni" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://stackoverflow.com/users/6302996/nikhil-kulkarni" target="_blank" rel="noopener">Stack Overflow</a>
+        </div>
+
+        <div class="id-card">
+          <div class="id-head">
+            <div class="id-photo"><img src="img/vinay.png" alt="Vinay Uppin" style="object-position:50% 20%;"></div>
+            <div class="id-identity">
+              <h3>Vinay Uppin</h3>
+              <p class="id-role">UI/UX / Angular Engineer</p>
+            </div>
+          </div>
+          <div class="id-tags">
+            <span class="id-tag">Ex-Accenture</span>
+            <span class="id-tag">T-Systems ICT</span>
+            <span class="id-tag">Micro Frontend / Module Federation</span>
+            <span class="id-tag">Azure AZ-900</span>
+            <a class="id-tag link" href="https://www.linkedin.com/in/vinuppin/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
       </div>
-
       <dl class="spec" style="margin-top:1.5rem;">
         <div class="spec-row">
           <dt>Core stack</dt>
-          <dd>Java, Spring Boot, Node.js, React / Next.js, React Native</dd>
+          <dd>Java, Spring Boot, Node.js, React / Next.js, React Native, Angular</dd>
         </div>
         <div class="spec-row">
           <dt>Data</dt>
@@ -605,9 +625,9 @@
           <dt>Track record</dt>
           <dd>
             <ul>
-              <li>2–3x faster processing via Redis caching microservice at Intuit</li>
-              <li>99.9% uptime IoT infrastructure for millions of devices at Mercedes-Benz</li>
-              <li>Unit test coverage lifted from 70% to 95% across CI/CD pipelines</li>
+              <li>Cut processing time 2–3x with a Redis caching layer at Intuit — lower compute cost, faster response for every user</li>
+              <li>Kept an IoT platform serving millions of devices at 99.9% uptime for Mercedes-Benz — infrastructure engineered so downtime isn't your problem</li>
+              <li>Took test coverage from 70% to 95% across CI/CD pipelines — fewer production incidents, safer releases, faster time to ship</li>
             </ul>
           </dd>
         </div>
