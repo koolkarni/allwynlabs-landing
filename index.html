@@ -327,11 +327,13 @@
   .id-tags{ display:flex; flex-wrap:wrap; gap: 0.5rem; margin: 1.1rem 1.5rem 0; padding: 1.1rem 0 1.6rem; border-top: 1px dashed var(--line-soft); }
   .id-tag{
     font-family:"IBM Plex Mono",monospace; font-size:0.68rem;
-    border:1px solid var(--line); padding: 0.38rem 0.7rem; border-radius: 20px;
-    color: var(--text-muted);
+    border:1px solid var(--chip-border); padding: 0.38rem 0.7rem; border-radius: 20px;
+    color: var(--primary);
+    background: var(--chip-bg);
     text-decoration: none;
   }
-  .id-tag.link{ color: var(--primary); border-color: var(--chip-border); }
+  .id-tag.link{ color: var(--primary); border-color: var(--chip-border); font-weight: 600; }
+  .id-tag.link:hover{ background: var(--chip-border); }
   .id-tag.link:hover{ background: var(--chip-bg); }
 
   .spec{
