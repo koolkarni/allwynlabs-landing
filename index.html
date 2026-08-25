@@ -5,53 +5,83 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Allwyn Labs — Web, Mobile, AI &amp; SaaS Engineering Studio</title>
 <meta name="description" content="Allwyn Labs is an engineering studio building web apps, mobile apps, landing pages, AI integrations, and SaaS platforms — end to end, front end to DevOps.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙️</text></svg>">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%231257a0'/%3E%3Cpolygon points='20,8.5 31,31 24.6,31 20,20.6 15.4,31 9,31' fill='%23fff'/%3E%3Crect x='14.6' y='23.4' width='10.8' height='2.6' fill='%231257a0'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
   :root{
-    --bg: #F3F6F5;
+    --bg: #FFFFFF;
+    --bg-alt: #F4F9FE;
     --surface: #FFFFFF;
-    --surface-2: #E7EEEC;
-    --line: #D2DBD8;
-    --text: #14211F;
-    --text-muted: #536661;
-    --cyan: #1B7E78;
-    --cyan-soft: #DCEEEB;
-    --amber: #C4661C;
-    --amber-soft: #F6E4D2;
-    --shadow: 0 1px 2px rgba(20,33,31,0.06);
+    --surface-2: #F8FBFE;
+    --line: #DDE8F3;
+    --line-soft: #E4ECF4;
+    --text: #0B1F30;
+    --text-body: #445D6F;
+    --text-muted: #5B7285;
+    --text-faint: #7D93A3;
+    --primary: #1257A0;
+    --primary-hover: #0D3F78;
+    --chip-bg: #EAF2FB;
+    --chip-border: #D3E4F5;
+    --navy: #0B2C4A;
+    --navy-2: #0D3355;
+    --navy-3: #081F34;
+    --on-navy: #E7F0F8;
+    --on-navy-muted: #B9D0E4;
+    --on-navy-accent: #7FB2DD;
+    --shadow: 0 18px 44px rgba(18,87,160,0.09);
   }
 
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --bg: #0F1A19;
-      --surface: #152321;
-      --surface-2: #1B2C2A;
-      --line: #2A3D3A;
-      --text: #E9F2F0;
-      --text-muted: #8FA8A2;
-      --cyan: #6FE3D3;
-      --cyan-soft: #1C332F;
-      --amber: #F2A65A;
-      --amber-soft: #33251A;
-      --shadow: 0 1px 2px rgba(0,0,0,0.4);
+      --bg: #081524;
+      --bg-alt: #0B1E30;
+      --surface: #0D2338;
+      --surface-2: #0F2942;
+      --line: #1C3A55;
+      --line-soft: #16293E;
+      --text: #E9F2FB;
+      --text-body: #B7CBDC;
+      --text-muted: #9DB3C6;
+      --text-faint: #7F97AB;
+      --primary: #5CA3E6;
+      --primary-hover: #7FB4EC;
+      --chip-bg: #123252;
+      --chip-border: #1D4A72;
+      --navy: #050F1C;
+      --navy-2: #0A1A2C;
+      --navy-3: #020A13;
+      --on-navy: #E7F0F8;
+      --on-navy-muted: #B9D0E4;
+      --on-navy-accent: #7FB2DD;
+      --shadow: 0 18px 44px rgba(0,0,0,0.45);
     }
   }
   :root[data-theme="dark"]{
-    --bg: #0F1A19;
-    --surface: #152321;
-    --surface-2: #1B2C2A;
-    --line: #2A3D3A;
-    --text: #E9F2F0;
-    --text-muted: #8FA8A2;
-    --cyan: #6FE3D3;
-    --cyan-soft: #1C332F;
-    --amber: #F2A65A;
-    --amber-soft: #33251A;
-    --shadow: 0 1px 2px rgba(0,0,0,0.4);
+    --bg: #081524;
+    --bg-alt: #0B1E30;
+    --surface: #0D2338;
+    --surface-2: #0F2942;
+    --line: #1C3A55;
+    --line-soft: #16293E;
+    --text: #E9F2FB;
+    --text-body: #B7CBDC;
+    --text-muted: #9DB3C6;
+    --text-faint: #7F97AB;
+    --primary: #5CA3E6;
+    --primary-hover: #7FB4EC;
+    --chip-bg: #123252;
+    --chip-border: #1D4A72;
+    --navy: #050F1C;
+    --navy-2: #0A1A2C;
+    --navy-3: #020A13;
+    --on-navy: #E7F0F8;
+    --on-navy-muted: #B9D0E4;
+    --on-navy-accent: #7FB2DD;
+    --shadow: 0 18px 44px rgba(0,0,0,0.45);
   }
 
   *{ box-sizing: border-box; }
@@ -60,244 +90,218 @@
     margin:0;
     background: var(--bg);
     color: var(--text);
-    font-family: "Public Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-family: "IBM Plex Sans", Helvetica, ui-sans-serif, system-ui, -apple-system, sans-serif;
     font-size: 16px;
     line-height: 1.6;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
   }
-  a{ color: inherit; }
+  a{ color: inherit; text-decoration: none; }
   h1,h2,h3{
-    font-family: "Fraunces", Georgia, serif;
-    font-weight: 500;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
     text-wrap: balance;
     margin: 0;
+    letter-spacing: -0.02em;
+    color: var(--text);
   }
-  .mono{
-    font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
-  }
+  .mono{ font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; }
+  ::selection{ background: var(--chip-border); }
+
   .eyebrow{
-    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
     font-size: 0.72rem;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--cyan);
-    display: flex;
-    align-items: center;
-    gap: 0.6em;
-  }
-  .eyebrow::before{
-    content: "";
-    width: 1.4em;
-    height: 1px;
-    background: var(--cyan);
-    display: inline-block;
+    color: var(--primary);
   }
   .wrap{
-    max-width: 1120px;
+    max-width: 1160px;
     margin: 0 auto;
     padding: 0 clamp(1.25rem, 4vw, 2.5rem);
   }
-  :focus-visible{ outline: 2px solid var(--amber); outline-offset: 3px; }
+  :focus-visible{ outline: 2px solid var(--primary); outline-offset: 3px; }
+
+  /* ---------- LOGO ---------- */
+  .mark{ flex-shrink:0; display:block; }
 
   /* ---------- NAV ---------- */
   header{
     position: sticky; top:0; z-index: 40;
-    background: color-mix(in srgb, var(--bg) 88%, transparent);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line);
+    background: color-mix(in srgb, var(--bg) 90%, transparent);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line-soft);
   }
   nav.wrap{
     display:flex; align-items:center; justify-content:space-between;
-    height: 64px;
+    height: 68px;
   }
   .brand{
-    font-family: "Fraunces", serif;
-    font-weight: 600;
-    font-size: 1.15rem;
-    letter-spacing: 0.01em;
-    display:flex; align-items:center; gap:0.5rem;
-    text-decoration:none;
+    display:flex; align-items:center; gap:0.7rem;
     color: var(--text);
   }
-  .brand .dot{
-    width:8px; height:8px; border-radius:2px;
-    background: var(--amber);
-    transform: rotate(45deg);
-    flex-shrink:0;
+  .brand-word{ display:flex; flex-direction:column; line-height:1.08; }
+  .brand-word .name{ font-size: 1.05rem; font-weight: 600; letter-spacing: -0.01em; font-family:"IBM Plex Sans"; }
+  .brand-word .tag{
+    font-family:"IBM Plex Mono", monospace; font-size: 0.58rem;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-faint);
   }
   .navlinks{ display:flex; gap: 1.8rem; align-items:center; }
   .navlinks a{
-    text-decoration:none; color: var(--text-muted);
+    color: var(--text-muted);
     font-size: 0.9rem; font-weight: 500;
     transition: color .15s ease;
   }
   .navlinks a:hover{ color: var(--text); }
-  .navlinks{ font-family:"Public Sans"; }
   @media (max-width: 720px){ .navlinks .hide-sm{ display:none; } }
 
   .btn{
     display:inline-flex; align-items:center; gap:0.5rem;
-    padding: 0.65rem 1.15rem;
-    border-radius: 3px;
+    padding: 0.7rem 1.25rem;
+    border-radius: 4px;
     font-weight: 600;
     font-size: 0.88rem;
-    text-decoration:none;
     border: 1px solid transparent;
     cursor:pointer;
+    font-family: "IBM Plex Sans", sans-serif;
     transition: transform .12s ease, background .15s ease, border-color .15s ease;
   }
   .btn:hover{ transform: translateY(-1px); }
-  .btn-primary{ background: var(--amber); color: #1A0F04; }
+  .btn-primary{ background: var(--primary); color: #fff; }
+  .btn-primary:hover{ background: var(--primary-hover); }
   .btn-ghost{ border-color: var(--line); color: var(--text); background: transparent; }
-  .btn-ghost:hover{ border-color: var(--cyan); }
+  .btn-ghost:hover{ border-color: var(--primary); }
 
   /* ---------- HERO ---------- */
   .hero{
-    position: relative;
-    padding: clamp(3.5rem, 9vw, 6.5rem) 0 clamp(3rem,7vw,5rem);
-    overflow: hidden;
+    background: linear-gradient(180deg, var(--bg-alt) 0%, var(--bg) 100%);
+    border-bottom: 1px solid var(--line-soft);
+    padding: clamp(3.5rem, 9vw, 6rem) 0 clamp(3rem,7vw,5rem);
   }
-  .schematic{
-    position:absolute; inset:0; z-index:0;
-    opacity: 0.55;
-    pointer-events:none;
-  }
-  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .schematic{ opacity:0.4; } }
-  :root[data-theme="dark"] .schematic{ opacity:0.4; }
-
-  .hero-inner{ position:relative; z-index:1; }
   .hero-grid{
     display:grid;
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 1.12fr 0.88fr;
     gap: clamp(2rem, 5vw, 3.5rem);
     align-items:center;
   }
   @media (max-width: 880px){ .hero-grid{ grid-template-columns: 1fr; } }
 
+  .chip{
+    display:inline-flex; align-items:center; gap:0.5rem;
+    font-family:"IBM Plex Mono", monospace; font-size: 0.72rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--primary); background: var(--chip-bg);
+    border: 1px solid var(--chip-border); border-radius: 3px;
+    padding: 0.45rem 0.8rem;
+  }
+
   .hero h1{
-    font-size: clamp(2.4rem, 5.4vw, 3.85rem);
-    line-height: 1.06;
-    margin-top: 0.9rem;
+    font-size: clamp(2.3rem, 5.2vw, 3.6rem);
+    line-height: 1.08;
+    margin-top: 1.1rem;
   }
-  .hero h1 em{
-    font-style: italic;
-    color: var(--cyan);
-  }
+  .hero h1 em{ font-style: italic; color: var(--primary); }
   .hero p.lede{
     margin-top: 1.4rem;
-    max-width: 46ch;
-    font-size: 1.08rem;
-    color: var(--text-muted);
+    max-width: 50ch;
+    font-size: 1.06rem;
+    line-height: 1.62;
+    color: var(--text-body);
   }
   .hero-cta{ display:flex; gap:0.9rem; margin-top: 2.1rem; flex-wrap:wrap; }
 
   .readout{
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: 6px;
+    border-radius: 8px;
     box-shadow: var(--shadow);
-    padding: 1.4rem 1.5rem;
-    font-family: "JetBrains Mono", monospace;
-    font-size: 0.83rem;
+    overflow: hidden;
   }
   .readout .rh{
-    display:flex; justify-content:space-between; align-items:center;
-    padding-bottom: 0.8rem; margin-bottom: 0.9rem;
-    border-bottom: 1px dashed var(--line);
-    color: var(--text-muted);
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--line-soft);
+    background: var(--surface-2);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-faint);
   }
-  .readout .rh .pulse{
-    width:7px; height:7px; border-radius:50%;
-    background: var(--cyan);
-    box-shadow: 0 0 0 3px var(--cyan-soft);
-  }
-  .readout dl{ margin:0; display:grid; grid-template-columns: auto 1fr; gap: 0.55rem 1rem; }
+  .readout dl{ margin:0; padding: 20px 22px; display:grid; gap: 0.85rem; }
+  .readout .row{ display:flex; justify-content:space-between; gap: 1rem; font-size: 0.9rem; }
   .readout dt{ color: var(--text-muted); }
-  .readout dd{ margin:0; text-align:right; font-weight: 600; }
+  .readout dd{ margin:0; text-align:right; font-weight: 600; color: var(--text); }
 
   /* ---------- SECTION HEADS ---------- */
   section{ padding: clamp(3.5rem, 7vw, 5.5rem) 0; }
-  .section-head{
-    max-width: 640px;
-    margin-bottom: clamp(2rem, 4vw, 3rem);
+  .section-head h2{
+    font-size: clamp(1.7rem, 3.2vw, 2.35rem);
+    margin-top: 0.6rem;
   }
-  .section-head h2{ font-size: clamp(1.7rem, 3.2vw, 2.3rem); margin-top: 0.6rem; }
-  .section-head p{ color: var(--text-muted); margin-top: 0.8rem; font-size: 1rem; max-width: 58ch; }
-
-  .divider{ border:none; border-top: 1px solid var(--line); margin:0; }
+  .section-head p{ color: var(--text-body); margin-top: 0.9rem; font-size: 1rem; max-width: 58ch; line-height: 1.62; }
+  .divider{ border:none; border-top: 1px solid var(--line-soft); margin:0; }
 
   /* ---------- SERVICES ---------- */
+  .services-layout{ display:grid; grid-template-columns: 0.85fr 1.15fr; gap: 3rem; align-items:start; }
+  @media (max-width: 900px){ .services-layout{ grid-template-columns: 1fr; } }
   .modules{
     display:grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1px;
-    background: var(--line);
-    border: 1px solid var(--line);
+    background: var(--line-soft);
+    border: 1px solid var(--line-soft);
     border-radius: 8px;
     overflow: hidden;
   }
-  @media (max-width: 980px){ .modules{ grid-template-columns: repeat(2,1fr); } }
   @media (max-width: 560px){ .modules{ grid-template-columns: 1fr; } }
   .module{
     background: var(--surface);
-    padding: 1.7rem 1.6rem;
-    display:flex; flex-direction:column; gap: 0.7rem;
+    padding: 1.6rem 1.5rem;
+    display:flex; flex-direction:column; gap: 0.6rem;
     transition: background .15s ease;
   }
   .module:hover{ background: var(--surface-2); }
-  .module .tag{
-    font-family:"JetBrains Mono", monospace;
-    font-size: 0.68rem;
-    color: var(--amber);
-    letter-spacing: 0.09em;
-  }
-  .module h3{ font-size: 1.12rem; font-weight: 600; font-family:"Public Sans"; }
-  .module p{ color: var(--text-muted); font-size: 0.92rem; margin:0; }
+  .module .tag{ font-family:"IBM Plex Mono", monospace; font-size: 0.68rem; color: var(--text-faint); }
+  .module h3{ font-size: 1.08rem; font-weight: 600; font-family:"IBM Plex Sans"; letter-spacing: 0; }
+  .module p{ color: var(--text-muted); font-size: 0.9rem; margin:0; line-height:1.55; }
 
   /* ---------- WORK ---------- */
-  .cases{ display:grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-  @media (max-width: 820px){ .cases{ grid-template-columns: 1fr; } }
+  .cases{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+  @media (max-width: 980px){ .cases{ grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 680px){ .cases{ grid-template-columns: 1fr; } }
   .case{
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: 8px;
-    padding: 1.9rem;
-    box-shadow: var(--shadow);
-    display:flex; flex-direction:column; gap: 1.1rem;
+    padding: 1.7rem;
+    display:flex; flex-direction:column; gap: 1rem;
   }
   .case-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; }
-  .case h3{ font-size: 1.4rem; }
-  .case .stack{ font-family:"JetBrains Mono",monospace; font-size:0.72rem; color: var(--text-muted); margin-top:0.4rem; }
-  .case p.desc{ color: var(--text-muted); font-size: 0.94rem; margin:0; }
+  .case h3{ font-size: 1.25rem; }
+  .case .stack{ font-family:"IBM Plex Mono",monospace; font-size:0.68rem; color: var(--text-faint); margin-top:0.4rem; }
+  .case p.desc{ color: var(--text-body); font-size: 0.9rem; line-height: 1.58; margin:0; }
   .case-metrics{
-    display:grid; grid-template-columns: repeat(3,1fr); gap: 0.8rem;
-    border-top: 1px dashed var(--line); padding-top: 1rem; margin-top: auto;
+    display:grid; grid-template-columns: repeat(3,1fr); gap: 0.6rem;
+    border-top: 1px solid var(--line-soft); padding-top: 1rem; margin-top: auto;
   }
-  .case-metrics div{ text-align:left; }
-  .case-metrics .n{ font-family:"JetBrains Mono",monospace; font-weight:600; font-size:1.05rem; color: var(--cyan); }
-  .case-metrics .l{ font-size:0.72rem; color: var(--text-muted); margin-top:0.15rem; }
+  .case-metrics .n{ font-family:"Source Serif 4",serif; font-weight:600; font-size:1.15rem; color: var(--primary); }
+  .case-metrics .l{ font-size:0.68rem; color: var(--text-faint); margin-top:0.15rem; }
   .pill{
-    font-family:"JetBrains Mono",monospace; font-size: 0.68rem;
-    padding: 0.28rem 0.6rem; border-radius: 20px;
-    background: var(--amber-soft); color: var(--amber);
+    font-family:"IBM Plex Mono",monospace; font-size: 0.65rem;
+    padding: 0.3rem 0.65rem; border-radius: 20px;
+    background: var(--chip-bg); color: var(--primary);
     white-space:nowrap;
   }
 
-  /* ---------- ABOUT / SPEC SHEET ---------- */
+  /* ---------- TEAM ---------- */
   .badges{ display:flex; flex-wrap:wrap; gap:0.5rem; margin-top: 1.4rem; }
   .badges span{
-    font-family:"JetBrains Mono",monospace; font-size:0.7rem;
+    font-family:"IBM Plex Mono",monospace; font-size:0.68rem;
     border:1px solid var(--line); padding: 0.35rem 0.65rem; border-radius: 4px;
     color: var(--text-muted);
   }
-
   .member{
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: 10px;
-    box-shadow: var(--shadow);
+    border-radius: 8px;
     padding: clamp(1.6rem,3vw,2.2rem);
     display:grid;
     grid-template-columns: auto 1fr;
@@ -306,90 +310,95 @@
   }
   @media (max-width: 640px){ .member{ grid-template-columns: 1fr; } }
   .member-photo{
-    width: 64px; height: 64px; border-radius: 8px;
-    background: var(--cyan-soft); color: var(--cyan);
+    width: 60px; height: 60px; border-radius: 6px;
+    background: var(--navy); color: #fff;
     display:flex; align-items:center; justify-content:center;
-    font-size: 1.1rem; font-weight:600; letter-spacing: 0.02em;
+    font-size: 1.05rem; font-weight:600; letter-spacing: 0.02em;
+    font-family: "IBM Plex Mono", monospace;
     flex-shrink:0;
   }
   .member-head{ display:flex; align-items:center; gap:0.8rem; flex-wrap:wrap; }
-  .member-head h3{ font-size: 1.3rem; }
-  .member-body p{ color: var(--text-muted); font-size: 0.94rem; margin: 0.9rem 0 0; max-width: 62ch; }
-  .member-links{ display:flex; gap:1.2rem; margin-top: 1.2rem; }
+  .member-head h3{ font-size: 1.25rem; }
+  .member-body p{ color: var(--text-body); font-size: 0.92rem; line-height: 1.62; margin: 0.9rem 0 0; max-width: 64ch; }
+  .member-links{ display:flex; gap:1.2rem; margin-top: 1.2rem; flex-wrap:wrap; }
   .member-links a{
-    font-family:"JetBrains Mono",monospace; font-size: 0.78rem;
-    color: var(--cyan); text-decoration: underline; text-underline-offset:2px;
+    font-family:"IBM Plex Mono",monospace; font-size: 0.76rem;
+    color: var(--primary); text-decoration: underline; text-underline-offset:2px;
   }
 
   .spec{
     background: var(--surface);
     border: 1px solid var(--line);
     border-radius: 8px;
-    box-shadow: var(--shadow);
     overflow:hidden;
   }
   .spec-row{
     display:grid; grid-template-columns: 130px 1fr;
     padding: 0.95rem 1.4rem;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--line-soft);
     gap: 1rem;
   }
   .spec-row:last-child{ border-bottom:none; }
   .spec-row dt{
-    font-family:"JetBrains Mono",monospace; font-size:0.72rem;
-    color: var(--text-muted); letter-spacing:0.05em; text-transform:uppercase;
+    font-family:"IBM Plex Mono",monospace; font-size:0.7rem;
+    color: var(--text-faint); letter-spacing:0.05em; text-transform:uppercase;
     padding-top: 0.1rem;
   }
-  .spec-row dd{ margin:0; font-size: 0.92rem; }
-  .spec-row dd a{ color: var(--cyan); text-decoration: underline; text-underline-offset: 2px; }
+  .spec-row dd{ margin:0; font-size: 0.9rem; color: var(--text); }
   .spec-row ul{ margin:0; padding-left: 1.1rem; }
-  .spec-row li{ margin-bottom: 0.3rem; color: var(--text-muted); font-size: 0.88rem; }
+  .spec-row li{ margin-bottom: 0.3rem; color: var(--text-body); font-size: 0.87rem; }
 
   /* ---------- CONTACT ---------- */
-  .contact{
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: clamp(2rem,5vw,3.2rem);
-    text-align:center;
-    position:relative;
-    overflow:hidden;
-  }
-  .contact h2{ font-size: clamp(1.8rem,4vw,2.6rem); }
-  .contact p{ color: var(--text-muted); margin-top:0.9rem; max-width: 50ch; margin-left:auto; margin-right:auto; }
+  #contact{ background: var(--navy); color: var(--on-navy); }
+  .contact-grid{ display:grid; grid-template-columns: 1fr 0.9fr; gap: 3rem; align-items:start; }
+  @media (max-width: 880px){ .contact-grid{ grid-template-columns: 1fr; } }
+  #contact h2{ color: #fff; font-size: clamp(1.9rem,4vw,2.5rem); }
+  #contact .lede{ color: var(--on-navy-muted); margin-top: 1rem; max-width: 48ch; font-size: 1.02rem; line-height:1.62; }
+  .contact-cta{ margin-top: 1.8rem; display:flex; gap:0.9rem; flex-wrap:wrap; }
+  #contact .btn-ghost{ border-color: rgba(255,255,255,0.28); color: #fff; }
+  #contact .btn-ghost:hover{ border-color: var(--on-navy-accent); }
   .terminal{
-    margin: 1.8rem auto 0;
-    max-width: 460px;
-    background: var(--surface-2);
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    text-align:left;
-    font-family:"JetBrains Mono",monospace;
+    background: var(--navy-2);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 8px;
+    padding: 1.4rem 1.5rem;
+    font-family:"IBM Plex Mono",monospace;
     font-size: 0.85rem;
-    padding: 1rem 1.2rem;
   }
   .terminal .caret::after{
-    content: "▍"; color: var(--cyan);
+    content: "▍"; color: var(--on-navy-accent);
     animation: blink 1.1s step-end infinite;
   }
   @media (prefers-reduced-motion: reduce){ .terminal .caret::after{ animation:none; } }
   @keyframes blink{ 50%{ opacity:0; } }
-  .contact-cta{ margin-top: 1.8rem; display:flex; gap:0.9rem; justify-content:center; flex-wrap:wrap; }
 
   footer{
-    padding: 2.2rem 0 3rem;
-    text-align:center;
-    color: var(--text-muted);
-    font-size: 0.82rem;
-    font-family:"JetBrains Mono",monospace;
+    background: var(--navy-3);
+    color: var(--on-navy-muted);
+    padding: 2rem 0;
   }
+  footer .wrap{
+    display:flex; align-items:center; justify-content:space-between; gap: 1.5rem; flex-wrap:wrap;
+    font-size: 0.82rem;
+  }
+  footer .f-brand{ display:flex; align-items:center; gap: 0.6rem; color: #fff; font-weight: 600; font-family:"IBM Plex Sans"; }
 </style>
 </head>
 <body>
 
 <header>
   <nav class="wrap">
-    <a class="brand" href="#top"><span class="dot"></span>Allwyn Labs</a>
+    <a class="brand" href="#top">
+      <svg class="mark" width="32" height="32" viewBox="0 0 40 40" aria-label="Allwyn Labs">
+        <rect x="1.25" y="1.25" width="37.5" height="37.5" rx="9" fill="var(--primary)"></rect>
+        <polygon points="20,8.5 31,31 24.6,31 20,20.6 15.4,31 9,31" fill="#ffffff"></polygon>
+        <rect x="14.6" y="23.4" width="10.8" height="2.6" fill="var(--primary)"></rect>
+      </svg>
+      <span class="brand-word">
+        <span class="name">Allwyn Labs</span>
+        <span class="tag">Software Engineering</span>
+      </span>
+    </a>
     <div class="navlinks">
       <a class="hide-sm" href="#services">Services</a>
       <a class="hide-sm" href="#work">Work</a>
@@ -401,40 +410,11 @@
 
 <main id="top">
   <section class="hero">
-    <svg class="schematic" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <defs>
-        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-          <path d="M40 0H0V40" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.25"/>
-        </pattern>
-      </defs>
-      <rect width="1200" height="640" fill="url(#grid)" style="color:var(--line)"/>
-      <g fill="none" stroke="var(--cyan)" stroke-width="1.2" opacity="0.55">
-        <path d="M 860 60 H 1040 V 200 H 1150"/>
-        <path d="M 900 60 V 0"/>
-        <path d="M 1040 200 V 320 H 950 V 420"/>
-        <path d="M 780 480 H 1080 V 560"/>
-        <path d="M 700 500 V 620"/>
-      </g>
-      <g fill="var(--cyan)" opacity="0.85">
-        <circle cx="860" cy="60" r="3.5"/>
-        <circle cx="1040" cy="200" r="3.5"/>
-        <circle cx="1150" cy="200" r="3.5"/>
-        <circle cx="950" cy="420" r="3.5"/>
-        <circle cx="780" cy="480" r="3.5"/>
-        <circle cx="1080" cy="560" r="3.5"/>
-        <circle cx="700" cy="500" r="3.5"/>
-      </g>
-      <g fill="var(--amber)" opacity="0.8">
-        <rect x="1030" y="190" width="20" height="20" rx="2"/>
-        <rect x="770" y="470" width="20" height="20" rx="2"/>
-      </g>
-    </svg>
-
-    <div class="wrap hero-inner">
+    <div class="wrap">
       <div class="hero-grid">
         <div>
-          <p class="eyebrow">Web · Mobile · AI · SaaS delivery</p>
-          <h1>We ship the <em>backend</em><br>that holds the front end up.</h1>
+          <span class="chip">Web · Mobile · AI · SaaS delivery</span>
+          <h1>Software engineered to <em>outlast</em> the pitch deck.</h1>
           <p class="lede">Allwyn Labs is an engineering studio building web apps, mobile apps, landing pages, and AI-powered SaaS. Our engineers have shipped production systems behind fintech, IoT, and marketplace platforms at companies like Intuit and Mercedes-Benz R&amp;D — now we build them for you.</p>
           <div class="hero-cta">
             <a class="btn btn-primary" href="#contact">Start a project</a>
@@ -442,13 +422,13 @@
           </div>
         </div>
         <div class="readout">
-          <div class="rh"><span>STUDIO.STATUS</span><span class="pulse"></span></div>
+          <div class="rh">Studio status</div>
           <dl>
-            <dt>Team experience</dt><dd>14+ yrs shipped</dd>
-            <dt>Uptime built</dt><dd>99.9%</dd>
-            <dt>Patents filed</dt><dd>3</dd>
-            <dt>Backgrounds</dt><dd>Intuit · Mercedes-Benz R&amp;D</dd>
-            <dt>Stack</dt><dd>Java · Node · React · AI</dd>
+            <div class="row"><dt>Team experience</dt><dd>14+ yrs shipped</dd></div>
+            <div class="row"><dt>Uptime built</dt><dd>99.9%</dd></div>
+            <div class="row"><dt>Patents filed</dt><dd>3</dd></div>
+            <div class="row"><dt>Backgrounds</dt><dd>Intuit · Mercedes-Benz R&amp;D</dd></div>
+            <div class="row"><dt>Stack</dt><dd>Java · Node · React · AI</dd></div>
           </dl>
         </div>
       </div>
@@ -459,51 +439,53 @@
 
   <section id="services">
     <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">What we build</p>
-        <h2>One team, the whole stack.</h2>
-        <p>No hand-offs between agencies for design, backend, and infrastructure — the same engineer who architects your database designs the screen your users tap.</p>
-      </div>
-      <div class="modules">
-        <div class="module">
-          <span class="tag">MOD.01 — WEB</span>
-          <h3>Web development</h3>
-          <p>Full-stack web apps on React, Next.js, and Spring Boot — built for the traffic spike, not just the demo.</p>
+      <div class="services-layout">
+        <div class="section-head" style="margin-bottom:0;">
+          <p class="eyebrow">Services</p>
+          <h2>One team, the whole stack.</h2>
+          <p>No hand-offs between agencies for design, backend, and infrastructure — the same engineer who architects your database designs the screen your users tap.</p>
         </div>
-        <div class="module">
-          <span class="tag">MOD.02 — MOBILE</span>
-          <h3>Mobile development</h3>
-          <p>React Native apps with native-feel performance, push notifications, and offline-first data sync.</p>
-        </div>
-        <div class="module">
-          <span class="tag">MOD.03 — LANDING</span>
-          <h3>Landing pages</h3>
-          <p>Conversion-focused marketing pages that load fast, read clearly, and turn visitors into signups.</p>
-        </div>
-        <div class="module">
-          <span class="tag">MOD.04 — AI</span>
-          <h3>AI integration</h3>
-          <p>LLM-powered features — search, agents, copilots, and automation — wired into your existing product.</p>
-        </div>
-        <div class="module">
-          <span class="tag">MOD.05 — SAAS</span>
-          <h3>SaaS builds</h3>
-          <p>Multi-tenant SaaS from schema to billing — subscriptions, entitlements, and role-based access done right.</p>
-        </div>
-        <div class="module">
-          <span class="tag">MOD.06 — DEVOPS</span>
-          <h3>Front end, back end, DevOps</h3>
-          <p>CI/CD, Docker, and cloud infrastructure so what you ship on day one still runs cleanly on day one thousand.</p>
-        </div>
-        <div class="module">
-          <span class="tag">MOD.07 — ECOMMERCE</span>
-          <h3>E-commerce platforms</h3>
-          <p>Storefronts with catalog, cart, checkout, and payment gateway integration — built to handle real inventory and real orders.</p>
-        </div>
-        <div class="module">
-          <span class="tag">MOD.08 — SEO</span>
-          <h3>SEO</h3>
-          <p>Technical SEO baked into the build — clean markup, fast load times, structured data, and sitemaps that get you found.</p>
+        <div class="modules">
+          <div class="module">
+            <span class="tag">WEB</span>
+            <h3>Web development</h3>
+            <p>Full-stack web apps on React, Next.js, and Spring Boot — built for the traffic spike, not just the demo.</p>
+          </div>
+          <div class="module">
+            <span class="tag">MOBILE</span>
+            <h3>Mobile development</h3>
+            <p>React Native apps with native-feel performance, push notifications, and offline-first data sync.</p>
+          </div>
+          <div class="module">
+            <span class="tag">LANDING</span>
+            <h3>Landing pages</h3>
+            <p>Conversion-focused marketing pages that load fast, read clearly, and turn visitors into signups.</p>
+          </div>
+          <div class="module">
+            <span class="tag">AI</span>
+            <h3>AI integration</h3>
+            <p>LLM-powered features — search, agents, copilots, and automation — wired into your existing product.</p>
+          </div>
+          <div class="module">
+            <span class="tag">SAAS</span>
+            <h3>SaaS builds</h3>
+            <p>Multi-tenant SaaS from schema to billing — subscriptions, entitlements, and role-based access done right.</p>
+          </div>
+          <div class="module">
+            <span class="tag">DEVOPS</span>
+            <h3>Front end, back end, DevOps</h3>
+            <p>CI/CD, Docker, and cloud infrastructure so what you ship on day one still runs cleanly on day one thousand.</p>
+          </div>
+          <div class="module">
+            <span class="tag">ECOMMERCE</span>
+            <h3>E-commerce platforms</h3>
+            <p>Storefronts with catalog, cart, checkout, and payment gateway integration — built to handle real inventory and real orders.</p>
+          </div>
+          <div class="module">
+            <span class="tag">SEO</span>
+            <h3>SEO</h3>
+            <p>Technical SEO baked into the build — clean markup, fast load times, structured data, and sitemaps that get you found.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -514,7 +496,7 @@
   <section id="work">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Recent builds</p>
+        <p class="eyebrow">Case studies</p>
         <h2>Platforms in production, not prototypes.</h2>
         <p>Three production platforms, built end to end — data model, APIs, infra, and the UI on top.</p>
       </div>
@@ -548,6 +530,7 @@
             <div><div class="n">OCI</div><div class="l">Cloud infra</div></div>
             <div><div class="n">RN + Web</div><div class="l">iOS · Android · React</div></div>
           </div>
+          <a class="btn btn-ghost" style="align-self:flex-start;" href="https://rentiqo.win" target="_blank" rel="noopener">View live project →</a>
         </div>
         <div class="case">
           <div class="case-top">
@@ -574,9 +557,9 @@
   <section id="team">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Who's building it</p>
+        <p class="eyebrow">Team</p>
         <h2>The engineers behind Allwyn Labs.</h2>
-        <p>A small studio, not a subcontractor chain — every project is built directly by the engineers on this page.</p>
+        <p>A small studio, not a subcontractor chain — every project is built directly by the engineer on this page.</p>
       </div>
 
       <div class="member">
@@ -634,21 +617,28 @@
 
   <section id="contact">
     <div class="wrap">
-      <div class="contact">
-        <p class="eyebrow" style="justify-content:center;">Let's build</p>
-        <h2>Have a project brief?<br>Send it over.</h2>
-        <p>Web app, mobile app, landing page, or an AI feature you can't quite scope yet — happy to look at it.</p>
-        <div class="terminal">
-          <div>$ contact --studio allwynlabs</div>
-          <div style="margin-top:0.5rem; color:var(--text-muted);">→ hello@allwynlabs.win</div>
-          <div class="caret" style="margin-top:0.5rem;">$&nbsp;</div>
+      <div class="contact-grid">
+        <div>
+          <p class="eyebrow" style="color:var(--on-navy-accent);">Let's build</p>
+          <h2 style="margin-top:0.6rem;">Have a project brief? Send it over.</h2>
+          <p class="lede">Web app, mobile app, landing page, or an AI feature you can't quite scope yet — happy to look at it.</p>
+          <div class="contact-cta">
+            <button type="button" class="btn btn-primary" id="copyEmailBtn" data-email="hello@allwynlabs.win">
+              <span id="copyEmailLabel">Copy hello@allwynlabs.win</span>
+            </button>
+            <a class="btn btn-ghost" href="mailto:hello@allwynlabs.win">Open in mail app</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/masternikhil/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+          </div>
         </div>
-        <div class="contact-cta">
-          <button type="button" class="btn btn-primary" id="copyEmailBtn" data-email="hello@allwynlabs.win">
-            <span id="copyEmailLabel">Copy hello@allwynlabs.win</span>
-          </button>
-          <a class="btn btn-ghost" href="mailto:hello@allwynlabs.win">Open in mail app</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/masternikhil/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <div style="display:flex; flex-direction:column; gap:1.4rem;">
+          <div class="terminal">
+            <div>$ contact --studio allwynlabs</div>
+            <div style="margin-top:0.5rem; color:var(--on-navy-muted);">→ hello@allwynlabs.win</div>
+            <div class="caret" style="margin-top:0.5rem;">$&nbsp;</div>
+          </div>
+          <div class="traffic-map">
+            <script type="text/javascript" src="https://cdn.livetrafficfeed.com/static/mapjs/live.js?ro=1&amp;rat=60&amp;typ=9&amp;mv=a814544e2ee74d56"></script><noscript><a href="https://livetrafficfeed.com/live-maps-visitor">Live Maps Visitor</a></noscript>
+          </div>
         </div>
       </div>
     </div>
@@ -656,7 +646,13 @@
 </main>
 
 <footer>
-  <div class="wrap">Allwyn Labs · allwynlabs.win — Pune, India</div>
+  <div class="wrap">
+    <div class="f-brand">
+      <svg width="24" height="24" viewBox="0 0 40 40"><rect width="40" height="40" rx="9" fill="#ffffff"></rect><polygon points="20,8.5 31,31 24.6,31 20,20.6 15.4,31 9,31" fill="var(--navy-3)"></polygon><rect x="14.6" y="23.4" width="10.8" height="2.6" fill="#ffffff"></rect></svg>
+      Allwyn Labs
+    </div>
+    <span>© 2026 Allwyn Labs · allwynlabs.win — Pune, India</span>
+  </div>
 </footer>
 
 <script>
@@ -689,7 +685,7 @@
   })();
 </script>
 
-<script id="_wauz65">var _wau = _wau || []; _wau.push(["map", "aayvf7m5rn", "z65", "192", "96", "night", "star-black"]);</script><script async src="//waust.at/m.js"></script>
+<script id="_wauz65">var _wau = _wau || []; _wau.push(["map", "aayvf7m5rn", "z65", "192", "96", "night", "star-black"]);</script><script async src="https://waust.at/m.js"></script>
 
 </body>
 </html>
